@@ -11,6 +11,7 @@ import {
 import { AccountService } from '../_services/account.service';
 import { FormsModule } from '@angular/forms';
 import { TitleCasePipe } from '@angular/common';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-register',
@@ -21,6 +22,7 @@ import { TitleCasePipe } from '@angular/common';
 })
 export class RegisterComponent implements OnInit {
   private accountService = inject(AccountService);
+  private toastr = inject(ToastrService);
 
   // @Input() usersFromHomeComponent: any = {};
   usersFromHomeComponent = input.required<any>();
@@ -34,10 +36,11 @@ export class RegisterComponent implements OnInit {
     this.accountService.register(this.model).subscribe({
       next: (res) => {
         this.cancel(); // cierro el register form
+        this.toastr.success('Bienvenido ');
       },
       error: (err) => {
         console.log(err);
-        // this.toastr.error(err.error + '  💩');
+        this.toastr.error(err.error + '  💩');
       },
     });
   }

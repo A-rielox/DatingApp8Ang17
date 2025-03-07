@@ -2,3 +2,8 @@
 .dropdown-item {
   cursor: pointer;
 }
+
+.nav-item > .active {
+  /* color: red; */
+  font-weight: bolder;
+}

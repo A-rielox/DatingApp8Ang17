@@ -1,4 +1,5 @@
 ﻿using API.Data;
+using API.Helpers;
 using API.Interfaces;
 using API.Services;
 using Microsoft.EntityFrameworkCore;
@@ -33,9 +34,11 @@ public static class ApplicationServiceExtensions
         //services.AddScoped<ILikesRepository, LikesRepository>();
         //services.AddScoped<IMessageRepository, MessageRepository>();
         //services.AddScoped<LogUserActivity>();
-        //services.AddScoped<IUserRepository, UserRepository>();
+        services.AddScoped<IUserRepository, UserRepository>();
 
         //services.AddAutoMapper(typeof(AutoMapperProfiles).Assembly);
+        // forma nueva
+        services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
         return services;
     }
