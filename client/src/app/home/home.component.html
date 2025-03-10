@@ -1,31 +1,31 @@
 <div class="container mt-5">
   <div style="text-align: center">
     @if (!registerMode) {
-    <h1>Find your match</h1>
+      <h1>Find your match</h1>
 
-    <p class="lead">
-      Come on in to view your matches... all you need to do is sign up!
-    </p>
+      <p class="lead">
+        Come on in to view your matches... all you need to do is sign up!
+      </p>
 
-    <div class="text-center">
-      <button (click)="registerToggle()" class="btn btn-primary btn-lg me-2">
-        Register
-      </button>
+      <div class="text-center">
+        <button (click)="registerToggle()" class="btn btn-primary btn-lg me-2">
+          Register
+        </button>
 
-      <button class="btn btn-primary btn-info btn-lg">Learn more</button>
-    </div>
+        <button class="btn btn-primary btn-info btn-lg">Learn more</button>
+      </div>
     } @else {
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-4">
-          <!-- corchetes para pasar los @Input o "= input<>();" al child [usersFromHomeComponent]="users" -->
-          <app-register
-            [usersFromHomeComponent]="users"
-            (cancelRegister)="cancelRegisterMode($event)"
-          ></app-register>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-4">
+            <!-- corchetes para pasar los @Input o "= input<>();" al child [usersFromHomeComponent]="users" -->
+            <app-register
+              [usersFromHomeComponent]="users"
+              (cancelRegister)="cancelRegisterMode($event)"
+            ></app-register>
+          </div>
         </div>
       </div>
-    </div>
     }
   </div>
 </div>

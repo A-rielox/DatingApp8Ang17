@@ -10,9 +10,6 @@ public class AppUser
     public byte[] PasswordSalt { get; set; } = [];
 
 
-
-
-
     public DateOnly DateOfBirth { get; set; }
     public required string KnownAs { get; set; }
     public DateTime Created { get; set; } = DateTime.UtcNow;

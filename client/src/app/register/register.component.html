@@ -43,8 +43,8 @@
     <select name="" id="" class="form-select">
       <!-- @for (user of usersFromHomeComponent; track $index) {  -->
       @for (user of usersFromHomeComponent(); track $index) {
-      <option [value]="user.userName">
-        {{ user.userName | titlecase }}
+      <option [value]="user.username">
+        {{ user.username | titlecase }}
       </option>
       }
     </select>

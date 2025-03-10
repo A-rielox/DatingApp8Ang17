@@ -25,7 +25,7 @@ export class NavComponent implements OnInit {
   private router = inject(Router);
   private toastr = inject(ToastrService);
 
-  model: any = { username: 'tom', password: 'P@ssword1' };
+  model: any = { username: 'lisa', password: 'P@ssword1' };
 
   ngOnInit(): void {}
 
