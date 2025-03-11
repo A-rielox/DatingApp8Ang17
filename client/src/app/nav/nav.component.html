@@ -33,6 +33,13 @@
     <!--           DROP-DOWN -->
     @if (accountService.currentUser()) {
       <div class="dropdown" dropdown>
+        <img
+          src="{{
+            accountService.currentUser()?.photoUrl || './assets/user.png'
+          }}"
+          alt="user photo"
+        />
+
         <a
           class="dropdown-toggle text-light text-decoration-none"
           dropdownToggle

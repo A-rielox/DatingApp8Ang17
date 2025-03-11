@@ -18,11 +18,7 @@ public class AutoMapperProfiles : Profile
         // puedo ocupar !. xq automapper en lugar de tirar excepcion va a mandar un null, xlo q no hay peligro
 
         CreateMap<Photo, PhotoDto>();
-
-
-
-
-        //CreateMap<MemberUpdateDto, AppUser>();
+        CreateMap<MemberUpdateDto, AppUser>();
         //CreateMap<RegisterDto, AppUser>();
 
         //CreateMap<Message, MessageDto>()

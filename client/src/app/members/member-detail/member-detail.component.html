@@ -55,7 +55,11 @@
 
         <tab heading="Photos" #photoTab="tab">
           @if (photoTab.active) {
-            <gallery [items]="images" class="gallery"></gallery>
+            <gallery
+              [items]="images"
+              class="gallery"
+              [itemAutosize]="true"
+            ></gallery>
             <!-- <ngx-gallery
             [options]="galleryOptions"
             [images]="galleryImages"

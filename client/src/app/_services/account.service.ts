@@ -21,7 +21,6 @@ export class AccountService {
       map((user) => {
         if (user) {
           this.setCurrentUser(user);
-          localStorage.setItem('user', JSON.stringify(user));
         }
 
         return user;
@@ -40,7 +39,6 @@ export class AccountService {
       map((user) => {
         if (user) {
           this.setCurrentUser(user);
-          localStorage.setItem('user', JSON.stringify(user));
         }
       }),
     );
@@ -48,6 +46,7 @@ export class AccountService {
 
   // lo ocupo desde app.component.ts
   setCurrentUser(user: User) {
+    localStorage.setItem('user', JSON.stringify(user));
     this.currentUser.set(user);
   }
 }
